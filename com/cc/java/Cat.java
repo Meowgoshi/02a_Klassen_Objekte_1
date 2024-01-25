@@ -1,5 +1,7 @@
 package com.cc.java;
 
+// import java.sql.Struct;
+
 public class Cat 
 {
     /*
@@ -9,31 +11,75 @@ public class Cat
     }
     */
 
-    String name;
-    String furColor;
-    int age;
+    private String name;
+    private String furColor;
+    private int age;
 
-    public String tellYourName()
-    {
-        // System.out.println(this.name);
-        return this.name;
+    
+
+    public Cat(String name, String furColor, int age) {
+        this.name = name;
+        this.furColor = furColor;
+        this.age = age;
     }
 
-    public void tellYourAddress()
+    public String getName()
     {
-        System.out.println(this);
+        if (getPermission()) 
+        {
+            return name;
+        } 
+        else 
+        {
+            return "Sorry, no permission!";
+        }
     }
 
-    public String tellYourFurColor()
+    // public String tellYourName()
+    // {
+    //     // System.out.println(this.name);
+    //     return this.name;
+    // }
+
+    public void setName(String Name)
     {
-        // System.out.println(this.furColor);
-        return this.furColor;
+        this.name = name;
+    }
+
+    // public void tellYourAddress()
+    // {
+    //     System.out.println(this);
+    // }
+
+    // public String tellYourFurColor()
+    // {
+    //     // System.out.println(this.furColor);
+    //     return this.furColor;
+    // }
+
+    public String getFurColor()
+    {
+        return furColor;
     }
     
-    public int tellYourAge()
+    // public int tellYourAge()
+    // {
+    //     // System.out.println(this.age);
+    //     return this.age;
+    // }
+
+    public int getAge()
     {
-        // System.out.println(this.age);
-        return this.age;
+        return age;
     }
     
+    public void setAge(int age)
+    {
+        this.age = age;
+    }
+
+    private boolean getPermission()
+    {
+        return true;
+    }
 }

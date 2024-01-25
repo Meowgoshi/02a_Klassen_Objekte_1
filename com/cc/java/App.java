@@ -5,50 +5,50 @@ public class App {
     public static void main(String[] args) 
     {
         
-        Cat cat = new Cat();    // Instanzierung
+        Cat cat = new Cat("Legoshi","gray",3);    // Instanzierung
 
         // Wertzuweisung
-        cat.name = "Legoshi";
-        cat.furColor ="gray";
-        cat.age = 3;
+        // cat.name = "Legoshi";
+        // cat.furColor ="gray";
+        // cat.age = 3;
 
         //Ausgabe
         // System.out.println(cat);
         // cat.sayHello();
-        output(cat.tellYourName());
-        output(cat.tellYourFurColor());
+        output(cat.getName());
+        output(cat.getFurColor());
         // System.out.println(cat.tellYourAge()); // int --> string
-        output(String.valueOf(cat.tellYourAge()));
+        output(String.valueOf(cat.getAge()));
         // cat.tellYourAddress();
         // cat.tellYourName();
         // cat.tellYourFurColor();
         // cat.tellYourAge();
 
         
-        System.out.println("----------------------------");
+        output("----------------------------");
  
-        Cat cat2 = new Cat();
-        cat2.name = "Ripley";
-        cat2.furColor = "black";
-        cat2.age = 2;
+        Cat cat2 = new Cat("Ripley","black",2);
+        // cat2.name = "Ripley";
+        // cat2.furColor = "black";
+        // cat2.age = 2;
  
         // System.out.println(cat2);
-        System.out.println(cat2.tellYourName());
-        System.out.println(cat2.tellYourFurColor());
-        System.out.println(cat2.tellYourAge());
+        output(cat2.getName());
+        output(cat2.getFurColor());
+        output(String.valueOf(cat2.getAge()));
         // cat2.tellYourAddress();
 
         System.out.println("----------------------------");
 
-        Cat cat3 = new Cat();
-        cat3.name = "Yuffie";
-        cat3.furColor = "brown";
-        cat3.age = 5;
+        Cat cat3 = new Cat("Yuffie","brown",5);
+        // cat3.name = "Yuffie";
+        // cat3.furColor = "brown";
+        // cat3.age = 5;
 
         // System.out.println(cat3);
-        System.out.println(cat3.tellYourName());
-        System.out.println(cat3.tellYourFurColor());
-        System.out.println(cat3.tellYourAge());
+        output(cat3.getName());
+        output(cat3.getFurColor());
+        output(String.valueOf(cat3.getAge()));
         // cat2.tellYourAddress();
         
     }
